@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, input {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flexbox-container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background-color: #232f3e;
+    overflow: hidden;
+    transition: margin 1.8s ease-in-out;
+}
+
+.flexbox-container:before {
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #ff9900, #ff5f00);
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    z-index: 6;
+    transition: all 1.8s ease-in-out;
+}
+
+.flexbox-container.sign-up-mode:before {
+    right: 52%;
+}
+
+.flexbox-container-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.flexbox-container-2 {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+}
+.flexbox-container-3 {
+    margin-left: 5%;
+}
+.flexbox-container-6 {
+    margin-top: 12%;
+    margin-left: 5%;
+}
+.flexbox-container-8 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.flexbox-container-9,
+.flexbox-container-11 {
+    padding: 3rem 12%;
+}
+
+.flexbox-container-10,
+.flexbox-container-12 {
+    color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.flexbox-container-10 h3,
+.flexbox-container-12 h3 {
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.flexbox-container-10 p,
+.flexbox-container-12 p {
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+}
+
+.flexbox-container-10 button,
+.flexbox-container-12 button {
+    width: 150px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: .5s;
+}
+
+.flexbox-container-10 button:hover,
+.flexbox-container-12 button:hover {
+    margin: 0;
+}
+
+.flexbox-container-10 button.transparent,
+.flexbox-container-12 button.transparent {
+    margin: 0;
+    background: none;
+    border: 2px solid black;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.input-field {
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: #ffffff;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+    padding: 0 .4rem;
+}
+
+.input-field i {
+    margin-right: 10px;
+    color: #ff9900;
+    font-size: 1.1rem;
+}
+
+.input-field input {
+    flex: 1;
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #232f3e;
+}
+
+.input-field input::placeholder {
+    color: black;
+    font-weight: 500;
+}
+
+.btn.transparent {
+    margin: 0;
+    background: none;
+    border: 2px solid black;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: background-color 0.5s;
+}
+
+.btn.transparent:hover {
+    color: black;
+}
+
+.flexbox-container-3 .btn.solid,
+.flexbox-container-6 .btn.solid {
+    width: 150px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+
+.flexbox-container-3 .btn.solid:hover,
+.flexbox-container-6 .btn.solid:hover {
+    margin: 0;
+}
+
+.flexbox-container-3 .btn.transparent,
+.flexbox-container-6 .btn.transparent {
+    margin: 0;
+    background: none;
+    border: 2px solid black;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.flexbox-container-3 .btn.transparent:hover,
+.flexbox-container-6 .btn.transparent:hover {
+    color: black;
+}
+.title,
+.flexbox-container-10 h3,
+.flexbox-container-12 h3,
+.flexbox-container-10 p,
+.flexbox-container-12 p {
+    color: #ffffff;
+}
+.btn.solid,
+.flexbox-container-10 button.transparent,
+.flexbox-container-12 button.transparent {
+    background-color: #ff9900;
+    color: #232f3e;
+}
+.btn.solid:hover,
+.flexbox-container-10 button.transparent:hover,
+.flexbox-container-12 button.transparent:hover {
+    background-color: #ff5f00;
+    color: #ffffff;
+}
+.input-field input:hover,
+.input-field input:focus {
+    border-color: #ff9900
+}
